@@ -23,7 +23,7 @@ function ReservationDetail({reservation, changeReser}) {
         ReservationService.getRating({userId: reserData.userId, bikeId: reserData.bikeId, resId: reserData.id}, user).then((res) => {
            setRating(res.data.rating);
         })
-    },[]);
+    },[reserData.bikeId, reserData.id, reserData.userId,user]);
 
     function handleCancel() {
         ReservationService.cancelReservation(reserData.id,{...reserData}, user).then((res) => {

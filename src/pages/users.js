@@ -25,7 +25,6 @@ function Users() {
         } else if (param === 'new') {
             setIsNew(val);
         } else if (param === 'reload') {
-            console.log('change called');
             setBit(prev => !prev);
         }
     }

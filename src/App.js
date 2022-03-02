@@ -23,7 +23,7 @@ function App() {
                 setUser(cookies.user);
             }
         }
-    }, []);
+    }, [cookies.user, user]);
 
 
     return (

@@ -89,8 +89,11 @@ export default function Login() {
                         <Grid container>
                             <Grid item>
                                 <span> Don't have an account? </span>
-                                <Link href="/signup" variant="body2">
+                                <Link href="/signup" variant="body2" sx={{paddingLeft: "12px"}}>
                                     {"Sign Up"}
+                                </Link>
+                                <Link href="https://docs.google.com/document/d/16PvgOV7Afj9Abjj_AiejMyxDjs4ihG9105FOlmcLHlg/edit?usp=sharing" variant="body2" sx={{paddingLeft: "12px"}}>
+                                    {"Login details"}
                                 </Link>
                             </Grid>
                         </Grid>

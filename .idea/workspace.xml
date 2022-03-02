@@ -5,12 +5,22 @@
       <change beforePath="$PROJECT_DIR$/../bike-backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bike-backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bike-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bike-backend/sqlite.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bike-backend/src/controllers/ratings.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/controllers/ratings.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/controllers/reservations.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/controllers/reservations.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bike-backend/src/entities/ratings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/entities/ratings.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bike-backend/src/entities/reservations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/entities/reservations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/guards/admin.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/guards/admin.guard.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bike-backend/src/services/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/services/users.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reservationDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservationDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/reservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reservations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,10 +128,10 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="240" y="117" key="Vcs.Push.Dialog.v2/0.23.1280.709@0.23.1280.709" timestamp="1645295866350" />
-    <state x="347" y="132" width="586" height="580" key="find.popup" timestamp="1646157470021">
+    <state x="347" y="132" width="586" height="580" key="find.popup" timestamp="1646218673319">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="347" y="132" width="586" height="580" key="find.popup/0.23.1280.709@0.23.1280.709" timestamp="1646157470021" />
+    <state x="347" y="132" width="586" height="580" key="find.popup/0.23.1280.709@0.23.1280.709" timestamp="1646218673319" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1645264969643">
       <screen x="0" y="23" width="1280" height="709" />
     </state>

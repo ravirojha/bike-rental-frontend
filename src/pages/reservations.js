@@ -22,9 +22,9 @@ function Reservations() {
     function changeReser(param, val) {
         if (param === 'reser') {
             setReser(val);
-        } else if (param = 'new') {
+        } else if (param === 'new') {
             setIsNew(val);
-        } else if (param = 'reload') {
+        } else if (param === 'reload') {
             setBit(prev => !prev);
         }
     }
@@ -66,7 +66,7 @@ function Reservations() {
                 setLoading(false);
             })).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
         }
-    }, [page, bit, id, location.pathname]);
+    }, [page, bit, id, location.pathname, user]);
 
 
 
