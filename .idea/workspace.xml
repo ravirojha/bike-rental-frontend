@@ -15,11 +15,6 @@
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/services/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/services/users.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/reservationDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reservationDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/reservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reservations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
