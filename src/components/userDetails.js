@@ -45,6 +45,8 @@ function UserDetails({userItem, changeUser, isNew}) {
                 toast.success("Added successfully")
                 changeUser('reload');
             }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+            setIsEditing(false);
+            changeUser('new',false);
         }
     }
 
@@ -54,6 +56,8 @@ function UserDetails({userItem, changeUser, isNew}) {
                 toast.success("Updated successfully")
                 changeUser('reload')
             }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+            setIsEditing(false);
+            changeUser('new',false);
         }
 
     }
@@ -119,10 +123,7 @@ function UserDetails({userItem, changeUser, isNew}) {
                     {isEditing ? (
                         <>
                             <CheckIcon onClick={() => {
-                                setIsEditing(false);
-                                changeUser('new',false);
                                 isNew ? handleAdd() : handleUpdate();
-                                changeUser('reload');
                             }} sx={{color: "green", cursor: "pointer"}}/>
                             <CloseIcon onClick={() => {
                                 setIsEditing(false);
