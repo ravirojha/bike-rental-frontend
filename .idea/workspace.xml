@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/guards/admin.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/guards/admin.guard.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +78,7 @@
       <workItem from="1645880359870" duration="6640000" />
       <workItem from="1646035871073" duration="14409000" />
       <workItem from="1646129175853" duration="14277000" />
-      <workItem from="1646210001889" duration="1611000" />
+      <workItem from="1646210001889" duration="1699000" />
     </task>
     <servers />
   </component>
