@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4272896-cfcd-4eae-9e37-d5d407c61d9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../bike-backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/sqlite.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/src/controllers/ratings.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/controllers/ratings.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/src/controllers/reservations.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/controllers/reservations.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/src/entities/ratings.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/entities/ratings.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/src/entities/reservations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/entities/reservations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/src/guards/admin.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/guards/admin.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bike-backend/src/services/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/services/users.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/bikeDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/bikeDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +15,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -131,9 +129,9 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.23.1280.709@0.23.1280.709" timestamp="1645264969643" />
-    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1646054256468">
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup" timestamp="1646245458092">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1646054256468" />
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1646245458092" />
   </component>
 </project>

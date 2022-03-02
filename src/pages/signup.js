@@ -6,6 +6,8 @@ import {createTheme, ThemeProvider} from '@mui/material/styles';
 import {useNavigate} from "react-router";
 import Auth from "../services/auth";
 import {toast} from "react-toastify";
+import {validateSignUpForm} from "../utils";
+import Link from "@mui/material/Link";
 
 const theme = createTheme();
 
@@ -17,12 +19,15 @@ export default function SignUp() {
 
 
     const handleSignup = (event) => {
-        Auth.signup({ name, email, password }).then((res) => {
-            toast.success(res);
-            navigate('/login')
-        }).catch((error) => {
-            toast.error(error?.response?.data?.message || "Something went wrong");
-        });
+        event.preventDefault();
+        if (validateSignUpForm(name, email, password)) {
+            Auth.signup({name, email, password}).then((res) => {
+                toast.success(res);
+                navigate('/login')
+            }).catch((error) => {
+                toast.error(error?.response?.data?.message || "Something went wrong");
+            });
+        }
     };
 
     return (
@@ -77,10 +82,13 @@ export default function SignUp() {
                     </TextField>
 
                     <div style={{ margin: "10px 0", textAlign: "center" }}>
-                        <Button variant="contained" onClick={() => handleSignup()}>
+                        <Button variant="contained" onClick={handleSignup}>
                             Sign Up{" "}
                         </Button>
                     </div>
+                    <Link href="/login" variant="body2" sx={{paddingLeft: "46%"}}>
+                        {"Login"}
+                    </Link>
                 </div>
             </div>
         </div>

@@ -29,19 +29,32 @@ function UserDetails({userItem, changeUser, isNew}) {
     const navigate = useNavigate();
     const {user} = useContext(AuthContext);
 
+    const validateData = () => {
+        if (!userData.name || userData.name.trim().length < 1)
+            toast.error("Valid name of atleast 1 char is required");
+        else if (!userData.email || /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(userData.email)) toast.error("Provide a valid email");
+        else if (!userData.password || userData.password.trim().length < 4) toast.error("Enter valid password of more than 4 characters");
+        else return true;
+    };
+
+
     function handleAdd() {
-        UserService.addUser({...userData}, user).then(() => {
-            changeUser('new', !isNew)
-            toast.success("Added successfully")
-            changeUser('reload');
-        }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+        if (validateData()) {
+            UserService.addUser({...userData}, user).then(() => {
+                changeUser('new', !isNew)
+                toast.success("Added successfully")
+                changeUser('reload');
+            }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+        }
     }
 
     function handleUpdate() {
-        UserService.updateUser(userData?.id,{...userData}, user).then(() => {
-            toast.success("Updated successfully")
-            changeUser('reload')
-        }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+        if (validateData()) {
+            UserService.updateUser(userData?.id, {...userData}, user).then(() => {
+                toast.success("Updated successfully")
+                changeUser('reload')
+            }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+        }
 
     }
 

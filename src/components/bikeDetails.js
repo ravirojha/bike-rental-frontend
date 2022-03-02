@@ -32,19 +32,35 @@ function BikeDetails({bike, changeBike, isNew, filterData}) {
     const navigate = useNavigate();
     const {user, setUser} = useContext(AuthContext);
 
+    const validateData = () => {
+        if (!bikeData.model || bikeData.model.trim().length < 1)
+            toast.error("Enter Model name");
+        else if (!bikeData.color || bikeData.color.trim().length < 1) toast.error("Enter color");
+        else if (!bikeData.location || bikeData.location.trim().length < 1) toast.error("Enter location");
+        else return true;
+    };
+
     function handleAdd() {
-        BikeService.addBike({...bikeData}, user).then(() => {
-            changeBike('new', !isNew)
-            toast.success("Added successfully")
-            changeBike('reload');
-        }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+        if (validateData()) {
+            BikeService.addBike({...bikeData}, user).then(() => {
+                changeBike('new', !isNew)
+                toast.success("Added successfully")
+                changeBike('reload');
+            }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+            setIsEditing(false);
+            changeBike('new',false);
+        }
     }
 
     function handleUpdate() {
-        BikeService.updateBike(bikeData.id,{...bikeData}, user).then(() => {
-            toast.success("Updated successfully")
-            changeBike('reload')
-        }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+        if (validateData()) {
+            BikeService.updateBike(bikeData.id, {...bikeData}, user).then(() => {
+                toast.success("Updated successfully")
+                changeBike('reload')
+            }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+            setIsEditing(false);
+            changeBike('new',false);
+        }
 
     }
 
@@ -164,10 +180,7 @@ function BikeDetails({bike, changeBike, isNew, filterData}) {
                     {user?.isManager && (isEditing ? (
                         <>
                             <CheckIcon onClick={() => {
-                                setIsEditing(false);
-                                changeBike('new',false);
                                 isNew ? handleAdd() : handleUpdate();
-                                changeBike('reload');
                             }} sx={{color: "green", cursor: "pointer"}}/>
                             <CloseIcon onClick={() => {
                                 setIsEditing(false);

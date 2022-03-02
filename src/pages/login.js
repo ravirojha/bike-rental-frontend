@@ -16,6 +16,7 @@ import {useNavigate} from "react-router";
 import {useCookies} from "react-cookie";
 import {useContext} from "react";
 import {AuthContext} from "../App";
+import {validateLoginForm} from "../utils";
 
 
 const theme = createTheme();
@@ -28,15 +29,17 @@ export default function Login() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        Auth.login({
-            email: data.get('email'),
-            password: data.get('password'),
-        }).then((res) => {
-            toast.success("Logged in successfully");
-            setCookie("user", res.data, {path: '/'});
-            setUser(res.data);
-            navigate("/");
-        }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+        if (validateLoginForm(data.get('email'), data.get('password'))) {
+            Auth.login({
+                email: data.get('email'),
+                password: data.get('password'),
+            }).then((res) => {
+                toast.success("Logged in successfully");
+                setCookie("user", res.data, {path: '/'});
+                setUser(res.data);
+                navigate("/");
+            }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
+        }
     };
 
     return (
@@ -92,7 +95,7 @@ export default function Login() {
                                 <Link href="/signup" variant="body2" sx={{paddingLeft: "12px"}}>
                                     {"Sign Up"}
                                 </Link>
-                                <Link href="https://docs.google.com/document/d/16PvgOV7Afj9Abjj_AiejMyxDjs4ihG9105FOlmcLHlg/edit?usp=sharing" variant="body2" sx={{paddingLeft: "12px"}}>
+                                <Link target="_blank" href="https://docs.google.com/document/d/16PvgOV7Afj9Abjj_AiejMyxDjs4ihG9105FOlmcLHlg/edit?usp=sharing" variant="body2" sx={{paddingLeft: "12px"}}>
                                     {"Login details"}
                                 </Link>
                             </Grid>
