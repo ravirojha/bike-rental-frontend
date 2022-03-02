@@ -10,10 +10,8 @@
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/guards/admin.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/guards/admin.guard.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../bike-backend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bike-backend/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/reservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reservations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -81,7 +79,7 @@
       <workItem from="1645880359870" duration="6640000" />
       <workItem from="1646035871073" duration="14409000" />
       <workItem from="1646129175853" duration="14277000" />
-      <workItem from="1646210001889" duration="1308000" />
+      <workItem from="1646210001889" duration="1611000" />
     </task>
     <servers />
   </component>
