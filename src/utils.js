@@ -11,7 +11,7 @@ export const jwtSecret = 'askd364egrg734te374terg';
 export const orangeColor = '#f0dc82';
 
 export const validateSignUpForm = (name, email, password) => {
-    if (name === "") {
+    if (name === "" || name.trim().length < 1) {
         toast.error("Name cannot be empty")
     } else if (email === "") {
         toast.error("Email cannot be empty")
