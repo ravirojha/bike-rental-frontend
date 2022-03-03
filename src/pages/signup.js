@@ -22,7 +22,7 @@ export default function SignUp() {
         event.preventDefault();
         if (validateSignUpForm(name, email, password)) {
             Auth.signup({name, email, password}).then((res) => {
-                toast.success(res);
+                toast.success("Signed Up Successfully");
                 navigate('/login')
             }).catch((error) => {
                 toast.error(error?.response?.data?.message || "Something went wrong");
