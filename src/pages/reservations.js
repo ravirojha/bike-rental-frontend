@@ -35,7 +35,6 @@ function Reservations() {
         const path = location.pathname.split('/')[2];
         if(path === 'bike') {
             ReservationService.getResByBikeId(id, {page}, user).then((res => {
-                console.log(res);
                 setReser(res?.data?.reservations);
                 setPageCount(res?.data.pageCount);
                 if (page > res?.data.pageCount){
@@ -46,7 +45,6 @@ function Reservations() {
             })).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
         } else if(path === 'user') {
             ReservationService.getResByUserId(id, {page}, user).then((res => {
-                console.log(res);
                 setReser(res?.data?.reservations);
                 setPageCount(res?.data.pageCount);
                 if (page > res?.data.pageCount){

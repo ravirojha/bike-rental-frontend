@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Container from '@mui/material/Container';
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -16,6 +16,10 @@ function Filter({page, changeBike, filterData}) {
 
     const [filter, setFilter] = useState(filterData);
     const [value, setValue] = useState([null, null]);
+
+    useEffect(() => {
+        setFilter(filterData);
+    },[filterData])
 
     function handleFilter(e) {
         e.preventDefault();

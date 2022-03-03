@@ -5,13 +5,11 @@ import {URL} from '../utils'
 
 export default class BikeService {
     static fetchBikes = async ({page = 1, startDate, endDate, model, color, location, rating}, { jwt }) => {
-        startDate = moment(startDate).format('YYYY-MM-DD');
-        endDate = moment(endDate).format('YYYY-MM-DD');
         const filter = {};
         filter.page = page;
         if(startDate && endDate) {
-            filter.startDate = startDate;
-            filter.endDate = endDate
+            filter.startDate = moment(startDate).format('YYYY-MM-DD');
+            filter.endDate = moment(endDate).format('YYYY-MM-DD');
         }
         if(model) filter.model = model;
         if(color) filter.color = color;

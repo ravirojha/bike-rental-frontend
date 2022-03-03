@@ -175,7 +175,7 @@ function BikeDetails({bike, changeBike, isNew, filterData}) {
                     </Box>
                 </CardContent>
                 <CardActions sx={{marginLeft: "1rem"}}>
-                    {!isEditing && <Button size="medium" disabled={!bikeData.isAvailable} onClick={handleReserve}>Reserve</Button>}
+                    {filterData?.startDate && filterData?.endDate && !isEditing && <Button size="medium" disabled={!bikeData.isAvailable} onClick={handleReserve}>Reserve</Button>}
                     {user?.isManager && !isEditing && <Button size="medium" onClick={() => {navigate(`/reservations/bike/${bikeData.id}`)}}>See Reservations</Button>}
                     {user?.isManager && (isEditing ? (
                         <>

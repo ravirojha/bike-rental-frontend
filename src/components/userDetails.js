@@ -32,8 +32,14 @@ function UserDetails({userItem, changeUser, isNew}) {
     const validateData = () => {
         if (!userData.name || userData.name.trim().length < 1)
             toast.error("Valid name of atleast 1 char is required");
-        else if (!userData.email || /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(userData.email)) toast.error("Provide a valid email");
-        else if (!userData.password || userData.password.trim().length < 4) toast.error("Enter valid password of more than 4 characters");
+        else if (!userData.email || !String(userData.email)
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            )) toast.error("Provide a valid email");
+        else if (userData.password && userData.password.length < 4) {
+            toast.error("Password length must be atleast 4 characters long")
+        }
         else return true;
     };
 
@@ -44,9 +50,9 @@ function UserDetails({userItem, changeUser, isNew}) {
                 changeUser('new', !isNew)
                 toast.success("Added successfully")
                 changeUser('reload');
+                setIsEditing(false);
+                changeUser('new',false);
             }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
-            setIsEditing(false);
-            changeUser('new',false);
         }
     }
 
@@ -55,11 +61,11 @@ function UserDetails({userItem, changeUser, isNew}) {
             UserService.updateUser(userData?.id, {...userData}, user).then(() => {
                 toast.success("Updated successfully")
                 changeUser('reload')
+                setIsEditing(false);
+                changeUser('new',false);
             }).catch((error) => toast.error(error?.response?.data?.message || "Something went wrong"));
-            setIsEditing(false);
-            changeUser('new',false);
-        }
 
+        }
     }
 
     function handleDelete() {

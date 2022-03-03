@@ -38,9 +38,13 @@ function Bikes() {
     }
 
     useEffect(() => {
+        setFilterData(null);
+    },[bit])
+
+    useEffect(() => {
         setLoading(true);
-        // console.log(filterData);
         BikeService.fetchBikes({page, ...filterData}, user).then((res) => {
+            console.log(res.data);
             setBikeData(res.data.bikeData);
             setPageCount(res?.data.pageCount);
             if (page > res?.data.pageCount){
@@ -68,8 +72,8 @@ function Bikes() {
                     {!loading ? bikeData?.map((bikeItem) => <BikeDetails key={bikeItem.id} bike={bikeItem}
                                                                          changeBike={changeBike} isNew={isNew} filterData={filterData}/>) :
                         <CircularProgress sx={{padding: "20% 50%"}}/>}
+                    {bikeData?.length === 0 && <h1 style={{marginLeft: "35%"}}>No items Found</h1>}
                 </Box>
-
                 <Pagination page={page} count={pageCount} siblingCount={0} onChange={(event, value) => setPage(value)}/>
             </Box>
         </Container>

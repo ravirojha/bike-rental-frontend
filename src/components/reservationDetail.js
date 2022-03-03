@@ -20,6 +20,10 @@ function ReservationDetail({reservation, changeReser}) {
     const [rating, setRating] = useState(null);
 
     useEffect(() => {
+        setRate(rating>0);
+    },[rating])
+
+    useEffect(() => {
         ReservationService.getRating({userId: reserData.userId, bikeId: reserData.bikeId, resId: reserData.id}, user).then((res) => {
            setRating(res.data.rating);
         })
@@ -98,7 +102,7 @@ function ReservationDetail({reservation, changeReser}) {
                         disabled={rating>0}
                     />}
                     <Box sx={{paddingTop: '8px'}}>
-                        {!rate && <Button size="medium" onClick={() => setRate(true)}>Rate Now</Button>}
+                        {!rate && <Button size="medium" onClick={() => setRate(true)} disabled={reserData?.status === 'CANCELLED' || reserData?.userId !== user.id}>Rate Now</Button>}
                         {reserData.status === 'ACTIVE' && <Button size="medium" onClick={handleCancel}>Cancel Reservation</Button>}
                     </Box>
                 </CardContent>
