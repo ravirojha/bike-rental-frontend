@@ -11,22 +11,26 @@ export const jwtSecret = 'askd364egrg734te374terg';
 export const orangeColor = '#f0dc82';
 
 export const validateSignUpForm = (name, email, password) => {
-    if (!name && !email && !password &&
-        name.trim().length > 4 &&
-        /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email) &&
-        password !== ""
-    ) {
-        return true;
+    if (name === "") {
+        toast.error("Name cannot be empty")
+    } else if (email === "") {
+        toast.error("Email cannot be empty")
+    } else if (password === "") {
+        toast.error("Password cannot be empty")
+    } else if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email))) {
+        toast.error("Enter a valid email address")
     } else {
-        toast.error("Invalid Credentials");
+        return true;
     }
 };
 
+
 export const validateLoginForm = (email, password) => {
-    if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email) && password !== "") {
-        console.log(email, password);
-        return true;
+    if (!(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email))) {
+        toast.error("Enter a valid email address");
+    } else if (password === "") {
+        toast.error("Password cannot be empty");
     } else {
-        toast.error("Invalid Credentials");
+        return true;
     }
 };
